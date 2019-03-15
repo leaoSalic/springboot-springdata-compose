@@ -19,6 +19,9 @@ public class RedisApplicationTests {
 //        test1();
         test3();
         test2();
+        test4();
+        test2();
+
     }
 
     @Autowired
@@ -39,11 +42,15 @@ public class RedisApplicationTests {
     }
 
     public void test2(){
-        Optional<Order> byId = orderDao.findById("123");
-        Order order = byId.get();
+        Optional<Order> byId = orderDao.findById("124");
+        Order order = byId.orElse(null);
         System.out.println(order);
     }
 
+
+    public void test2Delet(){
+        orderDao.deleteById("123");
+    }
 
     public void test3(){
         Order order = new Order();
@@ -55,4 +62,9 @@ public class RedisApplicationTests {
         orderDao2.saveorder(order);
     }
 
+    public void test4(){
+       //在dao里写死了key
+        orderDao2.deleteTestById("leihao","124");
+        orderDao2.findAllByName("leihao");
+    }
 }

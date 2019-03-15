@@ -3,10 +3,8 @@ package com.leao.springdata.redis;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.hash.Jackson2HashMapper;
 import org.springframework.stereotype.Repository;
 
-import java.util.Map;
 import java.util.Set;
 
 @Repository
@@ -47,7 +45,7 @@ public class OrderDao2 {
      * 删除对象
      * @param id
      */
-    public void deleteTestById(String name,Integer id) {
+    public void deleteTestById(String name,String id) {
         redisTemplate.opsForHash().delete(name,id);
     }
 

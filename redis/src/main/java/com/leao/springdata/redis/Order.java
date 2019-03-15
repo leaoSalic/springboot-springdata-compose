@@ -11,8 +11,8 @@ import java.util.Date;
 @Data
 @RedisHash
 public class Order implements Serializable {
-//    @Id
-//    @Indexed
+    @Id
+    @Indexed
     private String id;
     private String orderId;
     private String content;
