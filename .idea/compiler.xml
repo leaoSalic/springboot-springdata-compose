@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mongodb" />
+        <module name="redis" />
+        <module name="springboot-springdata-compose" />
         <module name="springdata" />
         <module name="springdata-test" />
       </profile>
